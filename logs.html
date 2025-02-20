@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="style.css">
+    <title>Maisons</title>
+</head>
+<body>
+    <h1 class="title">Historique et Suivi</h1>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table id="general-info">
+        <tr>
+            <th>Lieu</th>
+            <th>Brakmar</th>
+            <th>Bonta</th>
+            <th>Village Côtier</th>
+            <th>Village des &Eacute;leveurs</th>
+            <th>Village de la Canopée</th>
+            <th>Pandala Neutre</th>
+            <th>Astrub</th>
+            <th>Village Koalaks</th>
+            <th>Château d'Amakna</th>
+            <th>Sufokia</th>
+            <th>Le Village</th>
+            <th>Milifutaie</th>
+            <th>Clairiere</th>
+            <th>Plaine Scarafeuilles</th>
+            <th>Territoire Porcos</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <th>Maps</th>
+            <td>79</td>
+            <td>111</td>
+            <td>23</td>
+            <td>16</td>
+            <td>51</td>
+            <td>25</td>
+            <td>41</td>
+            <td>18</td>
+            <td>12</td>
+            <td>28</td>
+            <td>12</td>
+            <td>10</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>431</td>
+        </tr>
+        <tr>
+            <th>Maisons</th>
+            <td>187</td>
+            <td>323</td>
+            <td>61</td>
+            <td>16</td>
+            <td>157</td>
+            <td>40</td>
+            <td>65</td>
+            <td>25</td>
+            <td>24</td>
+            <td>78</td>
+            <td>23</td>
+            <td>13</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1018</td>
+        </tr>
+    </table>
+    <div class="footer">
+        <a href="index.html" class="backButton">Retour à l'accueil</a>
+    </div>
+    <div class="maintenance">
+
+        <!--Maintenance du 15 Janvier 2025-->
+        <button class="toggle-btn" onclick="toggleTable('table-15-janvier')">
+            Maintenance du 15 Janvier 2025
+        </button>
+        <div id="table-15-janvier" class="table-container">
+            <table class="logtable">
+                <thead>
+                <th colspan="4" class="total-header">Maisons & Cartes</th>
+                <tr style="text-align: center;">
+                    <th class="sub-header">Lieux</th>
+                    <th class="sub-header">Maps</th>
+                    <th class="sub-header">Maisons</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Brakmar</td>
+                    <td>62</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>Bonta</td>
+                    <td>82</td>
+                    <td>138</td>
+                </tr>
+                <tr>
+                    <td>Village cotier</td>
+                    <td>14</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Village des eleveurs</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Village de la canopee</td>
+                    <td>44</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Pandala neutre</td>
+                    <td>18</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Astrub</td>
+                    <td>20</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Village koalak</td>
+                    <td>11</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Chateau amakna</td>
+                    <td>8</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Sufokia</td>
+                    <td>19</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Le village</td>
+                    <td>7</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Milifutaie</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Clairiere</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Plaines scarafeuilles</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Territoire porcos</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="totaltable">
+                <thead>
+                    <!-- Première ligne avec fusion des 4 colonnes -->
+                    <tr>
+                        <th colspan="4" class="total-header">Total</th>
+                    </tr>
+                    <tr>
+                        <th class="sub-header">Maisons</th>
+                        <th class="sub-header">Maps</th>
+                        <th class="sub-header">Maps <span class="circle-plus">+</span></th>
+                        <th class="sub-header">Maisons <span class="circle-plus">+</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>478</td>
+                        <td>298</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Maintenance du 22 Janvier 2025-->
+        <button class="toggle-btn" onclick="toggleTable('table-22-janvier')">
+            Maintenance du 22 Janvier 2025
+        </button>
+        <div id="table-22-janvier" class="table-container">
+            <table class="logtable">
+                <thead>
+                <th colspan="4" class="total-header">Maisons & Cartes</th>
+                <tr style="text-align: center;">
+                    <th class="sub-header">Lieux</th>
+                    <th class="sub-header">Maps</th>
+                    <th class="sub-header">Maisons</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Brakmar</td>
+                    <td>62</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>Bonta</td>
+                    <td>84</td>
+                    <td>143</td>
+                </tr>
+                <tr>
+                    <td>Village cotier</td>
+                    <td>14</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Village des eleveurs</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Village de la canopee</td>
+                    <td>44</td>
+                    <td>91</td>
+                </tr>
+                <tr>
+                    <td>Pandala neutre</td>
+                    <td>18</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Astrub</td>
+                    <td>21</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>Village koalak</td>
+                    <td>11</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Chateau amakna</td>
+                    <td>8</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Sufokia</td>
+                    <td>19</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Le village</td>
+                    <td>7</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Milifutaie</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Clairiere</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Plaines scarafeuilles</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Territoire porcos</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="totaltable">
+                <thead>
+                    <!-- Première ligne avec fusion des 4 colonnes -->
+                    <tr>
+                        <th colspan="4" class="total-header">Total</th>
+                    </tr>
+                    <tr>
+                        <th class="sub-header">Maisons</th>
+                        <th class="sub-header">Maps</th>
+                        <th class="sub-header">Maps <span class="circle-plus">+</span></th>
+                        <th class="sub-header">Maisons <span class="circle-plus">+</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>489</td>
+                        <td>301</td>
+                        <td>3</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Maintenance du 29 Janvier 2025-->
+        <button class="toggle-btn" onclick="toggleTable('table-29-janvier')">
+            Maintenance du 29 Janvier 2025
+        </button>
+        <div id="table-29-janvier" class="table-container">
+            <table class="logtable">
+                <thead>
+                <th colspan="4" class="total-header">Maisons & Cartes</th>
+                <tr style="text-align: center;">
+                    <th class="sub-header">Lieux</th>
+                    <th class="sub-header">Maps</th>
+                    <th class="sub-header">Maisons</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Brakmar</td>
+                    <td>62</td>
+                    <td>106</td>
+                </tr>
+                <tr>
+                    <td>Bonta</td>
+                    <td>84</td>
+                    <td>146</td>
+                </tr>
+                <tr>
+                    <td>Village cotier</td>
+                    <td>14</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Village des eleveurs</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Village de la canopee</td>
+                    <td>44</td>
+                    <td>91</td>
+                </tr>
+                <tr>
+                    <td>Pandala neutre</td>
+                    <td>18</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Astrub</td>
+                    <td>22</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Village koalak</td>
+                    <td>11</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Chateau amakna</td>
+                    <td>8</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Sufokia</td>
+                    <td>19</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Le village</td>
+                    <td>7</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Milifutaie</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Clairiere</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Plaines scarafeuilles</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Territoire porcos</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="totaltable">
+                <thead>
+                    <!-- Première ligne avec fusion des 4 colonnes -->
+                    <tr>
+                        <th colspan="4" class="total-header">Total</th>
+                    </tr>
+                    <tr>
+                        <th class="sub-header">Maisons</th>
+                        <th class="sub-header">Maps</th>
+                        <th class="sub-header">Maps <span class="circle-plus">+</span></th>
+                        <th class="sub-header">Maisons <span class="circle-plus">+</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>495</td>
+                        <td>302</td>
+                        <td>1</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Maintenance du 5 Février 2025-->
+        <button class="toggle-btn" onclick="toggleTable('table-05-fevrier')">
+            Maintenance du 5 Février 2025
+        </button>
+        <div id="table-05-fevrier" class="table-container">
+            <p class="tocome">&Agrave venir<p>
+        </div>
+        <!--Maintenance du 12 Février 2025-->
+        <button class="toggle-btn" onclick="toggleTable('table-12-fevrier')">
+            Maintenance du 12 Février 2025
+        </button>
+        <div id="table-12-fevrier" class="table-container">
+            <p class="tocome">&Agrave venir<p>
+        </div>
+    </div>
+    <script src="scripts/logs.js"></script>
+</body>
+</html>

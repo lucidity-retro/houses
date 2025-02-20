@@ -1,0 +1,1016 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.title {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid {
+    width: auto;
+    zoom: 300%;
+    display: grid;
+    grid-auto-rows: 20px; /* Hauteur des rectangles */
+    gap: 1px; /* Espacement entre les rectangles */
+    background-color: white; /* Ligne de séparation */
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #575757;
+    position: relative;
+    color: #ffffff;
+    font-size: 6px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.leftwalls {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.leftwalls::before{
+    content: '';
+    position: absolute;
+    left: -1.5px; /* Débordement de 2px à gauche */
+    top: 0px; /* Débordement de 2px vers le haut */
+    bottom: 0px; /* Débordement de 2px vers le bas */
+    width: 2px; /* Largeur de la bordure gauche */
+    background-color: rgb(255,0,0);
+    z-index: 1; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.rightwalls {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.rightwalls::before{
+    content: '';
+    position: absolute;
+    right: -1.5px; /* Débordement de 2px à gauche */
+    top: 0px; /* Débordement de 2px vers le haut */
+    bottom: 0px; /* Débordement de 2px vers le bas */
+    width: 2px; /* Largeur de la bordure gauche */
+    background-color: rgb(255,0,0);
+    z-index: 1; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.topwalls {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.topwalls::before{
+    content: '';
+    position: absolute;
+    top: -1.5px; /* Positionner la bordure au-dessus de la cellule */
+    left: 0px; /* Débordement de 2px à gauche */
+    right: 0px; /* Débordement de 2px à droite */
+    height: 2px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du haut) */
+    background-color: rgb(255,0,0);
+    z-index: 1; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-top-left {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+/* Bordure qui déborde à droite */
+.white-top-left::after {
+    content: '';
+    position: absolute;
+    top: -2px; /* Décalage de 2px vers le haut pour ajuster la bordure */
+    left: -3px; /* Débordement de 2px à droite */
+    bottom: -2px; /* Décalage pour maintenir la bordure alignée avec la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+/* Bordure qui déborde en haut */
+.white-top-left::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Débordement de 2px vers le haut */
+    right: -2px; /* Débordement de 2px à gauche */
+    left: -3px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-top-right {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+/* Bordure qui déborde à droite */
+.white-top-right::after {
+    content: '';
+    position: absolute;
+    top: -3px; /* Décalage de 2px vers le haut pour ajuster la bordure */
+    right: -3px; /* Débordement de 2px à droite */
+    bottom: -2px; /* Décalage pour maintenir la bordure alignée avec la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+/* Bordure qui déborde en haut */
+.white-top-right::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Débordement de 2px vers le haut */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-top {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.white-top::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Positionner la bordure au-dessus de la cellule */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du haut) */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-bottom-left {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+/* Bordure qui déborde à gauche */
+.white-bottom-left::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Décalage vers le haut pour ajuster la bordure */
+    left: -3px; /* Débordement de 4px à gauche */
+    right: -3px;
+    bottom: -2px; /* Décalage vertical pour que la bordure couvre la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+/* Bordure qui déborde en bas */
+.white-bottom-left::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Débordement de 4px vers le bas */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-bottom-right {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+/* Bordure qui déborde à droite */
+.white-bottom-right::after {
+    content: '';
+    position: absolute;
+    top: -3px; /* Décalage vertical pour que la bordure soit au niveau du bas */
+    right: -3px; /* Débordement de 4px à droite */
+    bottom: -2px; /* Décalage vertical pour que la bordure couvre la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+/* Bordure qui déborde en bas */
+.white-bottom-right::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Débordement de 4px vers le bas */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-bottom {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.white-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Positionner la bordure en dessous de la cellule */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du bas) */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-left {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.white-left::before {
+    content: '';
+    position: absolute;
+    top: -1px; /* Décaler légèrement vers le haut pour ajuster l'effet de débordement */
+    left: -3px; /* Débordement de 4px à gauche */
+    bottom: -1px; /* Garder la bordure en bas de la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-right {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.white-right::after {
+    content: '';
+    position: absolute;
+    top: -1px; /* Décaler légèrement vers le haut pour ajuster l'effet de débordement */
+    right: -3px; /* Débordement de 4px à droite */
+    bottom: -2px; /* Garder la bordure en bas de la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.white-bottom-left-right {
+    background-color: #ffffff; /* Fond blanc */
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+/* Bordure qui déborde à gauche */
+.white-bottom-left-right::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Décalage vers le haut pour ajuster la bordure */
+    left: -3px; /* Débordement de 2px à gauche */
+    bottom: -2px; /* Décalage vertical pour que la bordure couvre la cellule sans débordement vertical */
+    width: 4px; /* Largeur de la bordure */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+/* Bordure qui déborde à droite et en bas (elles sont combinées dans un seul pseudo-élément ::after) */
+.white-bottom-left-right::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Débordement de 2px vers le bas */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure du bas */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-gauche {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.cas-particulier-gauche::before{
+    content: '';
+    position: absolute;
+    left: -2px; /* Débordement de 2px à gauche */
+    top: -3px; /* Débordement de 2px vers le haut */
+    bottom: -2px; /* Débordement de 2px vers le bas */
+    width: 4px; /* Largeur de la bordure gauche */
+    background-color: rgb(0, 0, 0); /* Couleur de la bordure */
+    z-index: 2; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-droite {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.cas-particulier-droite::before{
+    content: '';
+    position: absolute;
+    right: -2px; /* Débordement de 2px à gauche */
+    top: -3px; /* Débordement de 2px vers le haut */
+    bottom: -2px; /* Débordement de 2px vers le bas */
+    width: 4px; /* Largeur de la bordure gauche */
+    background-color: rgb(0, 0, 0); /* Couleur de la bordure */
+    z-index: 2; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-haut {
+    position: relative;
+}
+
+.cas-particulier-haut::after {
+    content: '';
+    position: absolute;
+    top: -3px; /* Positionner la bordure au-dessus de la cellule */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du haut) */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-bas {
+    position: relative;
+}
+
+.cas-particulier-bas::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Positionner la bordure en dessous de la cellule */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du bas) */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-bas-gauche {
+    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+}
+
+.cas-particulier-bas-gauche::before {
+    content: '';
+    position: absolute;
+    left: -2px; /* Débordement de 2px à gauche */
+    top: -2px; /* Débordement de 2px vers le haut */
+    bottom: -2px; /* Débordement de 2px vers le bas */
+    width: 4px; /* Largeur de la bordure gauche */
+    background-color: rgb(0, 0, 0); /* Couleur de la bordure */
+    z-index: 2; /* Assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+.cas-particulier-bas-gauche::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Positionner la bordure en dessous de la cellule */
+    left: -2px; /* Débordement de 2px à gauche */
+    right: -2px; /* Débordement de 2px à droite */
+    height: 4px; /* Hauteur de la bordure (équivalent à l'épaisseur de la bordure du bas) */
+    background-color: black; /* Couleur de la bordure */
+    z-index: 2; /* S'assurer que le pseudo-élément est au-dessus du contenu */
+}
+
+
+.cell span {
+    position: absolute;
+    top: 1px; /* Place le texte en haut */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.red-dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px; /* Place le point légèrement en bas du rectangle */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.walls {
+    background-color: #ffffff; /* blanc pour les cases spécifiques */
+    color: transparent; /* Masquer le texte */
+}
+
+.green {
+    background-color: #076b07; /* Vert clair pour les maisons */
+}
+
+.hide {
+    background-color: white !important;
+}
+
+.white-hide {
+    background-color: white !important;
+}
+
+.footer {
+    margin: 50px; /* Ajoute de l'espace au-dessus du footer pour le séparer du contenu principal */
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.backButton {
+    padding: 10px 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #0e0557;
+    border-radius: 5px;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+.footer:hover{
+    transform: translateY(-5px); /* Effet de survol : l'élément "monte" légèrement */
+}
+
+/* Style du menu */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none; /* Retirer les puces des éléments */
+    padding: 0;
+    display: grid; /* Utilisation de la grille CSS */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
+    gap: 20px; /* Espacement entre les items */
+}
+
+ul li {
+    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+    margin: 10px;
+}
+
+ul li a {
+    display: flex; /* Utiliser flexbox à l'intérieur du lien */
+    justify-content: center; /* Centrer le texte horizontalement */
+    align-items: center; /* Centrer le texte verticalement */
+    padding: 20px;
+    width: 150px; /* Largeur fixe des carrés */
+    height: 100px; /* Hauteur fixe des carrés */
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #b98006;
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Effet au survol */
+ul li a:hover {
+    background-color: #700606;
+    transform: translateY(-5px); /* Effet de survol : l'élément "monte" légèrement */
+}
+
+/* Stylisation de l'élément h1 */
+.title {
+    font-family: 'Georgia', serif; /* Choix de la police */
+    font-size: 2.5rem; /* Taille du texte */
+    padding: 30px;
+    color: #0e034b; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 40px; /* Espacement sous le titre */
+    font-weight: bold; /* Rendre le texte en gras */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    position: relative;
+    background-color: #9ef1f1; /* Couleur de l'arrière-plan de la boîte */
+    padding: 20px 40px; /* Espacement interne de la boîte */
+    border-radius: 15px; /* Bords arrondis */
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2); /* Ombre douce autour de la boîte */
+}
+
+/* Icones des maps Divers */
+
+.zaap {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/zaap.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.taverne {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/taverne.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.banque {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/banque.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.arene {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/arene.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+/* Icones des maps Ateliers */
+
+.abijoutier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_bijoutier.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.acordonnier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_cordonnier.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.atailleur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_tailleur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.aforgeron {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_forgeron.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.asculpteur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_sculpteur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.aalchimiste {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_alchimiste.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.abricoleur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_bricoleur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.aboucher {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_boucher.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.aboulanger {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_boulanger.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.apoissonnier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_pecheur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.amineur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/atelier_mineur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hbijoutier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_bijoutier.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hcordonnier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_cordonnier.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.htailleur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_tailleur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hforgeron {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_forgeron.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hsculpteur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_sculpteur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.halchimiste {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_alchimiste.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hboucher {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_boucher.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hboulanger {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_boulanger.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hpoissonnier {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_poissonnier.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hmineur {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_mineur.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hpaysan {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_paysan.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hrunes {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_runes.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hanimaux {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_animaux.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hdocuments {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_documents.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+.hressources {
+    display: flex;
+    position: relative; /* Nécessaire pour positionner le fond */
+    background-image: url('img/hdv_ressources.png'); /* Chemin de l'icône */
+    background-size: 12px 12px; /* Ajuster la taille de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: bottom; /* Centrer l'image */
+}
+
+#buttons {
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 10px; /* Espace entre les boutons */
+    margin-top: 20px; /* Marge en haut des boutons */
+}
+
+#buttons button {
+    padding: 10px 20px; /* Espacement interne des boutons (haut/bas, gauche/droite) */
+    font-family: 'Georgia', serif;
+    font-size: 20px; /* Taille de la police */
+    font-weight: bold;
+    border: none; /* Retirer les bordures par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #960565; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    cursor: pointer; /* Curseur en forme de main pour indiquer un bouton cliquable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition pour les interactions */
+}
+
+#buttons button:hover {
+    background-color: #4c077a; /* Couleur de fond au survol */
+    transform: scale(1.02); /* Légère augmentation de la taille du bouton lors du survol */
+}
+
+#buttons button:active {
+    background-color: #000000; /* Couleur de fond au clic */
+    transform: scale(0.98); /* Réduire légèrement la taille du bouton lors du clic */
+}
+
+.logtable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logtable thead th.total-header {
+    background-color: #2859a3; /* Violet foncé */
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center; /* Centre horizontalement */
+    vertical-align: middle; /* Centre verticalement */
+    padding: 10px; /* Optionnel : ajouter du padding pour un meilleur aspect */
+}
+
+.logtable thead .sub-header {
+    background-color: #D3D3D3; /* Gris clair */
+    color: black;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 22.5px;
+}
+  
+.logtable th, .logtable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+  
+.logtable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+.logtable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+  
+.logtable td {
+    font-family: 'Georgia', serif; /* Police Georgia avec une alternative par défaut */
+    font-size: 18px; /* Taille de la police */
+    font-weight: bold;
+}
+
+/* Alignement à gauche uniquement pour la colonne "Lieu" */
+.logtable td:nth-child(1), .logtable th:nth-child(1) {
+    text-align: left; /* Alignement à gauche */
+    padding-left: 20px; /* Optionnel : ajoute un peu d'espace */
+    padding-right: 60px;
+}
+
+/* Marges spécifiques pour les autres colonnes */
+.logtable td:nth-child(n+2), .logtable th:nth-child(n+2) {
+    padding-left: 28px; /* 10px de marge interne à gauche */
+    padding-right: 28px; /* 10px de marge interne à droite */
+}
+
+.table-container {
+    width: 100%;  /* La largeur du conteneur de la table */
+    display: none;  /* Cacher la table mais laisser l'espace */
+    transition: visibility 0.5s ease-in-out;  /* Transition pour l'effet d'apparition/disparition */
+}
+
+/* Bouton centré */
+.toggle-btn {
+    display: block;
+    width: 480px;
+    padding: 12px 20px;  /* Taille du bouton (haut/bas, gauche/droite) */
+    background-color: #015e2b;  /* Couleur de fond verte */
+    color: white;  /* Couleur du texte en blanc */
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;  /* Supprimer la bordure */
+    border-radius: 8px;  /* Coins arrondis */
+    cursor: pointer;  /* Curseur pointeur pour indiquer qu'il est cliquable */
+    transition: background-color 0.8s ease, transform 0.5s ease;  /* Effet de transition */
+    margin: 20px auto;  /* Espacement autour du bouton */
+}
+
+.toggle-btn:hover {
+    background-color: #1fd1e9;  /* Changer la couleur au survol */
+    transform: scale(1.05);  /* Augmenter légèrement la taille au survol */
+}
+
+.toggle-btn:focus {
+    outline: none;  /* Supprimer l'effet de focus (bordure bleue) */
+}
+
+.tocome {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.totaltable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.totaltable thead .total-header {
+    background-color: #4B0082; /* Violet foncé */
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.totaltable thead .sub-header {
+    background-color: #D3D3D3; /* Gris clair */
+    color: black;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 22.5px;
+}
+
+.totaltable th, .totaltable td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center; /* Centrer le contenu des cellules */
+}
+
+.totaltable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.totaltable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.totaltable td {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Centrer les chiffres */
+}
+
+.circle-plus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Diamètre du cercle */
+    height: 20px; /* Diamètre du cercle */
+    border-radius: 50%; /* Forme circulaire */
+    background-color: #0b9b10; /* Couleur de fond */
+    color: white; /* Couleur du symbole */
+    font-family: Arial, sans-serif; /* Police du symbole */
+    font-size: 16px; /* Taille du symbole */
+    font-weight: bold; /* Gras */
+    margin-left: 5px; /* Espacement avec le texte "Maps" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    cursor: default; /* Pas de changement de curseur */
+    vertical-align: middle; /* Alignement vertical avec le texte */
+}
+
+#general-info {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#general-info th, #general-info td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#general-info th {
+    text-align: center;
+    padding: 10px; /* Réduction de l'espace interne */
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#general-info td {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #f2f2f2;
+}
+
+#general-info th:first-child, #general-info td:first-child {
+    text-align: left;
+    font-weight: bold;
+    background-color: #ecaf3d;
+    color: black;
+    font-size: 20px;
+}
+
+#general-info td:last-child, #general-info th:last-child {
+    background-color: #4392ec;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+#general-info tr:hover td:not(:first-child):not(:last-child) {
+    background-color: #d1f2d1;
+}
