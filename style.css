@@ -1014,3 +1014,35 @@ ul li a:hover {
 #general-info tr:hover td:not(:first-child):not(:last-child) {
     background-color: #d1f2d1;
 }
+
+#log-button {
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+    display: inline-block; /* Permet au div de se comporter comme un bouton */
+    background-color: #4CAF50; /* Couleur de fond (vert) */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 20px 20px; /* Espacement intérieur */
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center; /* Centrer le texte */
+    color: white; /* Couleur du texte */
+    transition: background-color 0.3s, transform 0.3s; /* Transition douce pour le hover */
+}
+
+#log-button a {
+    color: white; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+#log-button:hover {
+    background-color: #2896df; /* Couleur de fond au survol */
+    transform: translateY(-5px); /* Décale le bouton vers le haut */
+}
+
+#log-button a:hover {
+    color: white; /* Assure-toi que la couleur reste blanche au survol */
+}
+
+
+
