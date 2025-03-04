@@ -74,7 +74,7 @@ const hide = [
 const walls = [
 ];
        	
-const houses = [[-56, 8], [-57, 8], [-56, 7], [-54, 7], [-54, 6], [-57, 6], [-57, 5]];
+const houses = [[-56, 8], [-57, 8], [-56, 7], [-54, 7], [-54, 6], [-57, 6], [-57, 5]]; 
     
 // Conteneur de la grille
 const grid = document.querySelector('.grid');

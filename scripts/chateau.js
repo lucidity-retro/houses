@@ -98,7 +98,7 @@ const divers = {
     ]
 };
 
-const houses = [[6, -6], [2, -5], [3, -5], [5, -4], [3, -4], [2, -4], [4, -3]];
+const houses = [[6, -6], [2, -5], [3, -5], [5, -4], [3, -4], [2, -4]];
     
 // Conteneur de la grille
 const grid = document.querySelector('.grid');
